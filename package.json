@@ -1,0 +1,16 @@
+{
+    "version": "0.0.1",
+    "name": "cn.com.youlove.app.service.heartbeat",
+    "cordova_name": "heartbeat",
+    "description": "Android心跳包",
+    "license": "Apache 2.0",
+    "keywords": [
+        "cordova",
+        "plugins",
+        "heartbeat"
+    ],
+    "platforms": [
+        "android"
+    ],
+    "engines": []
+}

@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cn.com.youlove.app.service.heartbeat" version="0.0.1"
+        xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>heartbeat</name>
+    <description>Android心跳包</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,plugins,heartbeat</keywords>
+
+    <js-module name="heartbeat" src="www/heartbeat.js">
+        <clobbers target="window.heartbeat"/>
+    </js-module>
+
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="Heartbeat">
+                <param name="android-package" value="cn.com.youlove.app.service.Heartbeat"/>
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <service android:enabled="true"
+                     android:exported="false"
+                     android:name="cn.com.youlove.app.service.HeartbeatService">
+            </service>
+        </config-file>
+
+        <source-file src="src/cn/com/youlove/app/service/Heartbeat.java" target-dir="src/cn/com/youlove/app/service/"/>
+        <source-file src="src/cn/com/youlove/app/service/HeartbeatService.java" target-dir="src/cn/com/youlove/app/service/"/>
+
+    </platform>
+
+</plugin>
